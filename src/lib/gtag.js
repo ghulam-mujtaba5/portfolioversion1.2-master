@@ -1,7 +1,7 @@
 // lib/gtag.js
+
 export const GA_TRACKING_ID = 'G-VRQQCKCK62';
 
-// Function to initialize Google Analytics
 export const initGA = () => {
   // Initialize gtag.js
   window.dataLayer = window.dataLayer || [];
@@ -14,7 +14,6 @@ export const initGA = () => {
   gtag('config', GA_TRACKING_ID);
 };
 
-// Log the pageview with the given URL
 export const pageview = (url) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
@@ -23,7 +22,6 @@ export const pageview = (url) => {
   }
 };
 
-// Log specific events happening
 export const event = ({ action, category, label, value }) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', action, {

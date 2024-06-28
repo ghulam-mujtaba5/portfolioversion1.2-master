@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Resume from "./pages/Resume";
 import DesktopPortfolio from "./pages/DesktopPortfolio";
 import { SpeedInsights } from "@vercel/speed-insights/react";
-import { initGA, pageview } from "./lib/gtag"; // Import Google Analytics functions
+import { initGA, pageview } from "./lib/gtag"; // Correct relative path to gtag.js
 
 function App() {
   const location = useLocation();
