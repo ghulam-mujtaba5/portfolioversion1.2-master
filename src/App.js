@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import Resume from "./pages/Resume";
 import DesktopPortfolio from "./pages/DesktopPortfolio";
-
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
   const action = useNavigationType();
@@ -50,10 +50,14 @@ function App() {
   }, [pathname]);
 
   return (
-    <Routes>
-      <Route path="/" element={<DesktopPortfolio />} />
-      <Route path="/resume" element={<Resume />} />
-    </Routes>
+    <>
+      <SpeedInsights />
+      <Routes>
+        <Route path="/" element={<DesktopPortfolio />} />
+        <Route path="/resume" element={<Resume />} />
+      </Routes>
+    </>
   );
 }
+
 export default App;

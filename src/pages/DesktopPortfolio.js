@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { css } from "@emotion/css";
 import { useNavigate } from "react-router-dom";
 import emailjs from '@emailjs/browser';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const DesktopPortfolio = () => {
   const navigate = useNavigate();
