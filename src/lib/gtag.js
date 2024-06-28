@@ -1,4 +1,4 @@
-// lib/gtag.js
+// src/lib/gtag.js
 
 export const GA_TRACKING_ID = 'G-VRQQCKCK62';
 
@@ -31,3 +31,6 @@ export const event = ({ action, category, label, value }) => {
     });
   }
 };
+
+// Initialize Google Analytics
+initGA();
