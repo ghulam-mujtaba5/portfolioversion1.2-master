@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
-import { Routes, Route, useNavigationType, useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import {
+  Routes,
+  Route,
+  useNavigationType,
+  useLocation,
+} from "react-router-dom";
 import Resume from "./pages/Resume";
 import DesktopPortfolio from "./pages/DesktopPortfolio";
-import * as gtag from './lib/gtag';
+
 
 function App() {
   const action = useNavigationType();
@@ -14,7 +19,6 @@ function App() {
       window.scrollTo(0, 0);
     }
   }, [action, pathname]);
-  
 
   useEffect(() => {
     let title = "Ghulam Mujtaba - Software Engineer Portfolio";
@@ -45,28 +49,9 @@ function App() {
     }
   }, [pathname]);
 
-  useEffect(() => {
-    // Track pageview on route change
-    const handleRouteChange = (url) => {
-      gtag.pageview(url);
-    };
-
-    // Initial page load
-    gtag.pageview(window.location.pathname);
-
-    // Listen for route changes
-    const unlisten = history.listen((location) => {
-      handleRouteChange(location.pathname);
-    });
-
-    // Cleanup on component unmount
-    return () => {
-      unlisten();
-    };
-  }, []);
-
   return (
     <>
+ 
       <Routes>
         <Route path="/" element={<DesktopPortfolio />} />
         <Route path="/resume" element={<Resume />} />
