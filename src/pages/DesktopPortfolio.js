@@ -5,9 +5,6 @@ import emailjs from '@emailjs/browser';
 import { SpeedInsights } from "@vercel/speed-insights/react"
 
 
-<head>
-<meta name="msvalidate.01" content="AEA8096EC48F292229F459E191C55CF1" />
-</head>
 const DesktopPortfolio = () => {
   const navigate = useNavigate();
 
